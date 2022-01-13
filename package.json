@@ -7,17 +7,18 @@
     "test": "jest"
   },
   "dependencies": {
+    "body-parser": "^1.19.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "jade": "^0.31.2",
+    "jade": "^0.29.0",
     "morgan": "~1.9.1",
     "pg": "^8.7.1",
     "sequelize": "^6.13.0"
   },
   "devDependencies": {
-    "supertest": "^6.2.1",
-    "jest": "^27.4.7"
+    "jest": "^27.4.7",
+    "supertest": "^6.2.1"
   }
 }

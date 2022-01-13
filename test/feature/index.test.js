@@ -1,11 +1,10 @@
 const supertest = require("supertest");
-const app = require("../../app")
+const app = require("../../app");
 
-test("GET /", async () => {
-  await supertest(app)
-  .get("/") // /api/index would be best practice - refactor this
-  .expect(200)
-  .then((res) => {
-    expect(res.body[0]).toContain('Hello World')
-  })
-})
+describe('Initial connections', () => {
+  it("Makes a succesful get req to the hompage ", async () => {
+    const res = await supertest(app)
+    .get("/"); // /api/index would be best practice - refactor this
+    expect(res.StatusCode).toEqual(200);
+  });
+});

@@ -12,10 +12,12 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "^0.31.2",
-    "jest": "^27.4.7",
     "morgan": "~1.9.1",
     "pg": "^8.7.1",
-    "sequelize": "^6.13.0",
-    "supertest": "^6.2.0"
+    "sequelize": "^6.13.0"
+  },
+  "devDependencies": {
+    "supertest": "^6.2.1",
+    "jest": "^27.4.7"
   }
 }

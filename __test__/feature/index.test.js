@@ -22,7 +22,7 @@ describe('Submit and display a form on another page', () => {
   it("Makes a POST request to another page", async () => {
     const res = await supertest(app)  
     .post('/') // Have the created ID linked after
-    .expect(201);
+    .expect(200);
   });
 });
 

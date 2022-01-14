@@ -21,7 +21,7 @@ describe('Initial connections', () => {
 describe('Submit and display a form on another page', () => {
   it("Makes a POST request to another page", async () => {
     const res = await supertest(app)  
-    .post('/newnote') // Have the created ID linked after
+    .post('/') // Have the created ID linked after
     .expect(201);
   });
 });

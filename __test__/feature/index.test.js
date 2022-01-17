@@ -24,11 +24,16 @@ describe('Submit and display a form on another page', () => {
     .post('/') // Have the created ID linked after
     .expect(200);
   });
+
+  it("Displays form content on page", async () => {
+    const res = await supertest(app)
+    .post('/') 
+    .send({noteTitle: 'My day', noteBody: 'It was good'})
+    .expect((response) => {
+      response.text.includes('My day', 'It was good')
+    });
+  });
 });
-
-// For when we check the pages content
-//.send({noteTitle: 'Sweet summer times', noteBody: 'I like drinking lemonade in the sun!'})
-
 
 // it('should not accept empty test', function (done) {
 //   supertest(schsrch)

@@ -3,14 +3,11 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index');
-  // res.sendStatus(200);
+  res.render('index', {noteTitle: req.body.noteTitle, noteBody: req.body.noteTitle});
 });
 
-  router.post('/', function (req, res){
-    res.send(req.body)
-    res.sendStatus(201);
-    // res.render('index');
+router.post('/', function (req, res){
+  res.send(req.body);
 });
 
 
